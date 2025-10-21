@@ -1,4 +1,5 @@
 import os
+import datetime
 
 # ============================================================
 # ⚙️ API CONFIGURATION
@@ -35,27 +36,24 @@ LEAGUES = TOP_LEAGUES
 # 📅 SEASON SETTINGS
 # ============================================================
 
-# Current season (for live data)
-CURRENT_SEASON = 2024
-
-# Historical season (used for training / model building)
-HIST_SEASON = 2023
-
-# Default season fallback
+CURRENT_SEASON = datetime.datetime.now().year
+HIST_SEASON = CURRENT_SEASON - 1
 DEFAULT_SEASON = CURRENT_SEASON
-
-# Number of upcoming fixtures to fetch per league
-NEXT_FIXTURES = 10  # Adjust to your liking
+NEXT_FIXTURES = 10  # Number of upcoming fixtures per league
 
 # ============================================================
 # ⚡ APP SETTINGS
 # ============================================================
 
-# Whether to use live API data (True) or cached local data (False)
 USE_LIVE_API = True
-
-# Refresh interval for auto-updating live matches (in seconds)
 REFRESH_INTERVAL = 300  # 5 minutes
-
-# Enable debug logging
 DEBUG_MODE = True
+
+# ============================================================
+# 🔐 HEADERS FOR API REQUESTS
+# ============================================================
+
+HEADERS = {
+    "x-apisports-key": API_FOOTBALL_KEY,
+    "x-rapidapi-host": API_FOOTBALL_HOST,
+}
