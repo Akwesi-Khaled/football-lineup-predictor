@@ -4,14 +4,17 @@ import os
 # API CONFIGURATION
 # ============================================================
 
-# Load your API key securely (from Streamlit Secrets or .env)
+# Securely load your API key (from Streamlit Secrets or .env)
 API_FOOTBALL_KEY = os.getenv("API_FOOTBALL_KEY")
 
-# Base URL for API-Football (direct endpoint)
+# Base URL for API-Football (official direct endpoint)
 BASE_URL = "https://v3.football.api-sports.io"
 
-# Host name for headers (for RapidAPI or compatibility)
+# Host (used in headers, especially with RapidAPI)
 API_FOOTBALL_HOST = "v3.football.api-sports.io"
+
+# Number of upcoming fixtures to fetch per league
+NEXT_FIXTURES = 20  # You can change to 5, 15, 20 etc.
 
 # ============================================================
 # LEAGUE INFORMATION
@@ -28,5 +31,15 @@ TOP_LEAGUES = {
     "Champions League (Europe)": 2,
 }
 
-# For backward compatibility
+# For backward compatibility with modules using LEAGUES
 LEAGUES = TOP_LEAGUES
+
+# ============================================================
+# APP SETTINGS
+# ============================================================
+
+# Default season to pull data for
+DEFAULT_SEASON = 2024
+
+# Whether to use cached or live API mode
+USE_LIVE_API = True
