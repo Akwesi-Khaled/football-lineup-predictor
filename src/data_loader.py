@@ -7,8 +7,7 @@ from .config import API_FOOTBALL_KEY, API_FOOTBALL_HOST, NEXT_FIXTURES, HIST_SEA
 headers = {
     "x-apisports-key": API_FOOTBALL_KEY,
     "x-rapidapi-host": API_FOOTBALL_HOST
-}
- if API_FOOTBALL_KEY else {}
+} if API_FOOTBALL_KEY else {}
 
 def _safe_get(url, params=None, timeout=15):
     try:
