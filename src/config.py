@@ -7,14 +7,16 @@ import os
 # Load your API key securely (from Streamlit Secrets or .env)
 API_FOOTBALL_KEY = os.getenv("API_FOOTBALL_KEY")
 
-# Base URL for the API-Football endpoints
+# Base URL for API-Football (direct endpoint)
 BASE_URL = "https://v3.football.api-sports.io"
+
+# Host name for headers (for RapidAPI or compatibility)
+API_FOOTBALL_HOST = "v3.football.api-sports.io"
 
 # ============================================================
 # LEAGUE INFORMATION
 # ============================================================
 
-# Common league IDs (from API-Football docs)
 TOP_LEAGUES = {
     "Premier League (England)": 39,
     "La Liga (Spain)": 140,
@@ -26,6 +28,5 @@ TOP_LEAGUES = {
     "Champions League (Europe)": 2,
 }
 
-# For backward compatibility with older imports
+# For backward compatibility
 LEAGUES = TOP_LEAGUES
-
