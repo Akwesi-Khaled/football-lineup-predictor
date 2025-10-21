@@ -29,6 +29,3 @@ TOP_LEAGUES = {
 # For backward compatibility with older imports
 LEAGUES = TOP_LEAGUES
 
-
-HIST_SEASON = 2023
-NEXT_FIXTURES = 50
