@@ -53,7 +53,7 @@ DEBUG_MODE = True
 # 🔐 HEADERS FOR API REQUESTS
 # ============================================================
 
-HEADERS = {
-    "x-apisports-key": API_FOOTBALL_KEY,
-    "x-rapidapi-host": API_FOOTBALL_HOST,
+headers = {
+    'x-rapidapi-key': "7ef75016e6mshd080ad5607cce21p1878a4jsn7352066fcd77",
+    'x-rapidapi-host': "api-football-v1.p.rapidapi.com"
 }
