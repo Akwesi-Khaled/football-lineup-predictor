@@ -4,7 +4,11 @@ import pandas as pd
 import streamlit as st
 from .config import API_FOOTBALL_KEY, API_FOOTBALL_HOST, NEXT_FIXTURES, HIST_SEASON
 
-HEADERS = {"x-apisports-key": API_FOOTBALL_KEY} if API_FOOTBALL_KEY else {}
+headers = {
+    "x-apisports-key": API_FOOTBALL_KEY,
+    "x-rapidapi-host": API_FOOTBALL_HOST
+}
+ if API_FOOTBALL_KEY else {}
 
 def _safe_get(url, params=None, timeout=15):
     try:
