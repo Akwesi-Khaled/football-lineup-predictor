@@ -2,7 +2,7 @@
 import requests
 import pandas as pd
 import streamlit as st
-from .config import API_FOOTBALL_KEY, API_FOOTBALL_HOST, NEXT_FIXTURES, HIST_SEASON
+from .config import API_FOOTBALL_KEY, API_FOOTBALL_HOST, HIST_SEASON
 
 headers = {
     "x-apisports-key": API_FOOTBALL_KEY,
