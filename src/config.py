@@ -1,7 +1,7 @@
 import os
 
 # ============================================================
-# API CONFIGURATION
+# ⚙️ API CONFIGURATION
 # ============================================================
 
 # Securely load your API key (from Streamlit Secrets or .env)
@@ -13,11 +13,8 @@ BASE_URL = "https://v3.football.api-sports.io"
 # Host (used in headers, especially with RapidAPI)
 API_FOOTBALL_HOST = "v3.football.api-sports.io"
 
-# Number of upcoming fixtures to fetch per league
-NEXT_FIXTURES = 20  # You can change to 5, 15, 20 etc.
-
 # ============================================================
-# LEAGUE INFORMATION
+# 🏆 LEAGUE INFORMATION
 # ============================================================
 
 TOP_LEAGUES = {
@@ -31,15 +28,34 @@ TOP_LEAGUES = {
     "Champions League (Europe)": 2,
 }
 
-# For backward compatibility with modules using LEAGUES
+# For backward compatibility
 LEAGUES = TOP_LEAGUES
 
 # ============================================================
-# APP SETTINGS
+# 📅 SEASON SETTINGS
 # ============================================================
 
-# Default season to pull data for
-DEFAULT_SEASON = 2024
+# Current season (for live data)
+CURRENT_SEASON = 2024
 
-# Whether to use cached or live API mode
+# Historical season (used for training / model building)
+HIST_SEASON = 2023
+
+# Default season fallback
+DEFAULT_SEASON = CURRENT_SEASON
+
+# Number of upcoming fixtures to fetch per league
+NEXT_FIXTURES = 10  # Adjust to your liking
+
+# ============================================================
+# ⚡ APP SETTINGS
+# ============================================================
+
+# Whether to use live API data (True) or cached local data (False)
 USE_LIVE_API = True
+
+# Refresh interval for auto-updating live matches (in seconds)
+REFRESH_INTERVAL = 300  # 5 minutes
+
+# Enable debug logging
+DEBUG_MODE = True
