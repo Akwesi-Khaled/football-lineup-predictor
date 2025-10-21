@@ -1,7 +1,7 @@
 
 import os
 
-API_FOOTBALL_KEY = os.getenv("API_FOOTBALL_KEY", "")
+API_FOOTBALL_KEY = os.getenv("API_FOOTBALL_KEY", "cd66d468fd61f98a71cb18e05aecf09f")
 API_FOOTBALL_HOST = os.getenv("API_FOOTBALL_HOST", "v3.football.api-sports.io")
 
 TOP_LEAGUES = {
