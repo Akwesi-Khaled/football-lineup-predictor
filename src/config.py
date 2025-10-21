@@ -1,5 +1,8 @@
 import os
 import datetime
+import http.client
+
+conn = http.client.HTTPSConnection("api-football-v1.p.rapidapi.com")
 
 # ============================================================
 # ⚙️ API CONFIGURATION
@@ -57,3 +60,10 @@ headers = {
     'x-rapidapi-key': "7ef75016e6mshd080ad5607cce21p1878a4jsn7352066fcd77",
     'x-rapidapi-host': "api-football-v1.p.rapidapi.com"
 }
+
+conn.request("GET", "/v3/fixtures?date=2021-01-29", headers=headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
